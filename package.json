@@ -1,5 +1,5 @@
 {
-  "name": "@capacitor-community/intercom",
+  "name": "@aquipa/intercom",
   "version": "7.1.0",
   "description": "Enable Intercom features for Capacitor apps",
   "main": "dist/plugin.cjs.js",
@@ -79,9 +79,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/capacitor-community/intercom"
+    "url": "https://github.com/aquipa/intercom"
   },
   "bugs": {
-    "url": "https://github.com/capacitor-community/intercom/issues"
+    "url": "https://github.com/aquipa/intercom/issues"
   }
 }
