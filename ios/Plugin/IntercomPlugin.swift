@@ -43,7 +43,15 @@ public class IntercomPlugin: CAPPlugin {
         guard let deviceToken = notification.object as? Data else {
             return
         }
-        Intercom.setDeviceToken(deviceToken)
+        Intercom.setDeviceToken(deviceToken) { result in
+          switch result {
+            case .success:
+              print("Intercom device token registered successfully")
+            case .failure(let error):
+              // Handle the error, such as a network issue or invalid token
+              print("Failed to register Intercom device token: \(error.localizedDescription)")
+          }
+        }
     }
 
     @objc func loadWithKeys(_ call: CAPPluginCall) {
