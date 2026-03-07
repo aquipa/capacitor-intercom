@@ -12,7 +12,7 @@
   <a href="https://www.npmjs.com/package/@capacitor-community/intercom"><img src="https://img.shields.io/npm/dw/@capacitor-community/intercom?style=flat-square" /></a>
   <a href="https://www.npmjs.com/package/@capacitor-community/intercom"><img src="https://img.shields.io/npm/v/@capacitor-community/intercom?style=flat-square" /></a>
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-21-orange?style=flat-square" /></a>
+<a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-22-orange?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 </p>
 
@@ -74,6 +74,10 @@ Intercom.displayMessageComposer({ message: 'Hello there!' });
 // Identity Verification
 // https://developers.intercom.com/installing-intercom/docs/ios-identity-verification
 Intercom.setUserHash({ hmac: 'xyz' });
+
+// Secure Your Messenger
+// https://developers.intercom.com/installing-intercom/ios/secure-your-messenger
+Intercom.setUserJwt({ jwt: 'xyz' });
 ```
 
 ## iOS setup
@@ -151,6 +155,7 @@ Now you should be set to go. Try to run your client using `ionic cap run android
 * [`hideInAppMessages()`](#hideinappmessages)
 * [`displayCarousel(...)`](#displaycarousel)
 * [`setUserHash(...)`](#setuserhash)
+* [`setUserJwt(...)`](#setuserjwt)
 * [`setBottomPadding(...)`](#setbottompadding)
 * [`sendPushTokenToIntercom(...)`](#sendpushtokentointercom)
 * [`receivePush(...)`](#receivepush)
@@ -333,6 +338,19 @@ setUserHash(options: { hmac: string; }) => Promise<void>
 | Param         | Type                           |
 | ------------- | ------------------------------ |
 | **`options`** | <code>{ hmac: string; }</code> |
+
+--------------------
+
+
+### setUserJwt(...)
+
+```typescript
+setUserJwt(options: { jwt: string; }) => Promise<void>
+```
+
+| Param         | Type                          |
+| ------------- | ----------------------------- |
+| **`options`** | <code>{ jwt: string; }</code> |
 
 --------------------
 
@@ -546,6 +564,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://t.me/reslear"><img src="https://avatars.githubusercontent.com/u/12596485?v=4?s=75" width="75px;" alt="reslear"/><br /><sub><b>reslear</b></sub></a><br /><a href="https://github.com/capacitor-community/intercom/commits?author=reslear" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/pmatter"><img src="https://avatars.githubusercontent.com/u/35367833?v=4?s=75" width="75px;" alt="Philipp Matter"/><br /><sub><b>Philipp Matter</b></sub></a><br /><a href="https://github.com/capacitor-community/intercom/commits?author=pmatter" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/jpike88"><img src="https://avatars.githubusercontent.com/u/9585787?v=4?s=75" width="75px;" alt="Josh Pike"/><br /><sub><b>Josh Pike</b></sub></a><br /><a href="#maintenance-jpike88" title="Maintenance">🚧</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/vtorenaintermedia"><img src="https://avatars.githubusercontent.com/u/128741423?v=4?s=75" width="75px;" alt="vtorenaintermedia"/><br /><sub><b>vtorenaintermedia</b></sub></a><br /><a href="https://github.com/capacitor-community/intercom/commits?author=vtorenaintermedia" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

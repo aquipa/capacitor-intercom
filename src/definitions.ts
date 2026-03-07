@@ -1,4 +1,4 @@
-import type { PluginListenerHandle } from "@capacitor/core/types/definitions";
+import type { PluginListenerHandle } from '@capacitor/core/types/definitions';
 
 export interface IntercomPlugin {
   loadWithKeys(options: { appId?: string; apiKeyIOS?: string; apiKeyAndroid?: string }): Promise<void>;
@@ -17,6 +17,7 @@ export interface IntercomPlugin {
   hideInAppMessages(): Promise<void>;
   displayCarousel(options: { carouselId: string }): Promise<void>;
   setUserHash(options: { hmac: string }): Promise<void>;
+  setUserJwt(options: { jwt: string }): Promise<void>;
   setBottomPadding(options: { value: string }): Promise<void>;
   sendPushTokenToIntercom(options: { value: string }): Promise<void>;
   receivePush(notification: IntercomPushNotificationData): Promise<void>;

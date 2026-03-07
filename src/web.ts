@@ -1,10 +1,6 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type {
-  IntercomPlugin,
-  IntercomPushNotificationData,
-  IntercomUserUpdateOptions,
-} from './definitions';
+import type { IntercomPlugin, IntercomPushNotificationData, IntercomUserUpdateOptions } from './definitions';
 
 export class IntercomWeb extends WebPlugin implements IntercomPlugin {
   constructor() {
@@ -78,6 +74,11 @@ export class IntercomWeb extends WebPlugin implements IntercomPlugin {
   }
 
   async setUserHash(options: { hmac: string }): Promise<void> {
+    options;
+    throw this.unimplemented('Not implemented on web.');
+  }
+
+  async setUserJwt(options: { jwt: string }): Promise<void> {
     options;
     throw this.unimplemented('Not implemented on web.');
   }
